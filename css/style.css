@@ -1,7 +1,7 @@
 :root {
   --firstColor: #000000;
   --secondColor: #fff;
-  --thirdColor: #2c8ec7;
+  --thirdColor: #67b7e5;
   --fourthColor: ##000000e6;
 }
 
@@ -45,7 +45,7 @@ header nav {
   justify-content: space-around;
   align-items: center;
   position: fixed;
-  width: 50%;
+  width: 40rem;
   margin: 0 auto;
   padding: 0.5rem 0;
   margin-top: 2rem;
@@ -54,12 +54,79 @@ header nav {
   -webkit-backdrop-filter: blur(0.5rem);
           backdrop-filter: blur(0.5rem);
   box-shadow: 0 0 1rem 0.4rem var(--thirdColor);
-}
-header nav .menu {
-  display: none;
+  font-family: aladin, sans-serif;
 }
 header nav .logo {
   margin: 0 1rem;
+}
+header nav .menu {
+  color: var(--secondColor);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+header nav .menu:hover {
+  transform: scale(1.2);
+}
+header nav .connexion {
+  background-color: var(--firstColor);
+  border: 3px solid var(--thirdColor);
+  color: var(--secondColor);
+  font-family: aladin, sans-serif;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.5s all;
+}
+header nav .connexion:hover {
+  transform: scale(1.1);
+}
+header nav .blocIcones {
+  display: flex;
+  gap: 1rem;
+}
+header nav .blocIcones button {
+  border: 0;
+  cursor: pointer;
+  transition: 0.5s all;
+  background-color: transparent;
+}
+header nav .blocIcones button:hover {
+  transform: scale(1.2);
+}
+header nav .blocIcones button i {
+  color: var(--secondColor);
+  font-size: 2rem;
+}
+header nav ul {
+  position: absolute;
+  top: 5rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  transform: translateX(-100rem);
+  transition: 1s all;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  border-radius: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--thirdColor);
+  background-color: rgba(0, 0, 0, 0.9019607843);
+  -webkit-backdrop-filter: blur(0.5rem);
+          backdrop-filter: blur(0.5rem);
+  box-shadow: 0 0 1rem 0.4rem var(--thirdColor);
+}
+header nav ul li a {
+  color: var(--thirdColor);
+  font-size: 1.2rem;
+}
+header nav ul button {
+  display: none;
 }
 header nav a {
   color: var(--secondColor);
@@ -73,21 +140,188 @@ header nav a:hover {
 header nav a span {
   color: var(--thirdColor);
 }
-header nav i {
-  color: var(--secondColor);
-  font-size: 2rem;
-  opacity: 0.6;
-}
-header nav ul {
-  font-size: 0;
-  display: flex;
-  gap: 2rem;
-}
-header nav ul li a {
-  font-size: 1.2rem;
-}
-header nav ul li a:hover {
+header .active .menu p {
   color: var(--thirdColor);
+}
+header .active ul {
+  transform: translateX(0);
+}
+
+.flip-card {
+  width: 25rem;
+  height: 32rem;
+  perspective: 1000px;
+  font-family: Roboto, sans-serif;
+  margin: 0 auto;
+  visibility: hidden;
+  justify-content: center;
+  position: fixed;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s;
+  z-index: 20;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border: 3px solid var(--thirdColor);
+  border-radius: 1rem;
+  width: 25rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+.flip-card-inner .logo {
+  color: var(--secondColor);
+  font-family: aladin, sans-serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.flip-card-inner .logo span {
+  color: var(--thirdColor);
+}
+.flip-card-inner input {
+  border: 3px solid var(--thirdColor);
+  background-color: var(--firstColor);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: 90%;
+  color: var(--secondColor);
+  margin-bottom: 0.5rem;
+  outline: 0;
+}
+.flip-card-inner :nth-child(4) {
+  color: var(--secondColor);
+  font-size: 0.6rem;
+  opacity: 0.5;
+  width: 90%;
+  text-align: right;
+  margin-bottom: 1rem;
+  justify-content: flex-end;
+  cursor: pointer;
+}
+.flip-card-inner :nth-child(5) {
+  background-color: var(--thirdColor);
+  color: var(--secondColor);
+  border: none;
+}
+.flip-card-inner :nth-child(6) {
+  border: 3px solid var(--secondColor);
+  background-color: var(--firstColor);
+  color: var(--secondColor);
+}
+.flip-card-inner .separation {
+  display: flex;
+  color: var(--secondColor);
+  align-items: center;
+  width: 90%;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.flip-card-inner .separation .line {
+  background-color: var(--thirdColor);
+  width: 70%;
+  height: 1px;
+}
+.flip-card-inner :nth-child(8) {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--firstColor);
+  border: 3px solid var(--secondColor);
+  color: var(--secondColor);
+}
+.flip-card-inner :nth-child(8) img {
+  width: 1rem;
+  height: 1rem;
+}
+.flip-card-inner button {
+  border: 0;
+  width: 90%;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  color: var(--secondColor);
+  background-color: var(--firstColor);
+  border-radius: 1rem;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
+}
+.flip-card-back input {
+  border: 3px solid var(--thirdColor);
+}
+.flip-card-back .nomPrenom {
+  width: 90%;
+  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.flip-card-back input[type=tel] {
+  text-align: left;
+  opacity: 1;
+  cursor: initial;
+}
+.flip-card-back input[type=tel]::-moz-placeholder {
+  color: var(--secondColor);
+  opacity: 0.4;
+  font-size: 0.65rem;
+}
+.flip-card-back input[type=tel]::placeholder {
+  color: var(--secondColor);
+  opacity: 0.4;
+  font-size: 0.65rem;
+}
+.flip-card-back .mailUsername {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  gap: 1rem;
+  background-color: var(--firstColor);
+}
+.flip-card-back input[type=password] {
+  border-color: var(--thirdColor);
+}
+.flip-card-back .already {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+.flip-card-back .already .line {
+  width: 6rem;
+  height: 1px;
+  background-color: var(--thirdColor);
+}
+.flip-card-back .connexionBtn {
+  background-color: var(--thirdColor);
+  color: var(--secondColor);
 }
 
 main.index section {
@@ -170,7 +404,6 @@ main.prestations h2 {
   color: var(--secondColor);
   width: 100%;
   margin: 5% auto;
-  text-decoration: underline;
   text-decoration-color: var(--thirdColor);
 }
 main.prestations section {
@@ -280,7 +513,7 @@ main.prestations .clients .bloc .commentaire {
   flex-direction: column;
   align-items: center;
   padding: 15px;
-  border: 0.1rem solid #2c8ec7;
+  border: 0.1rem solid var(--thirdColor);
   border-radius: 1.5rem;
   font-family: Arial, sans-serif;
   transition: 0.5s all;
@@ -689,6 +922,14 @@ footer nav a:hover {
     transform: translateX(-1682.4px);
   }
 }
+@keyframes scroll2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-864px);
+  }
+}
 @keyframes globe {
   0% {
     transform: translateX(0) rotate(0);
@@ -700,57 +941,48 @@ footer nav a:hover {
     transform: translateX(-40vw) rotate(-720deg);
   }
 }
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 850px) {
   html {
-    font-size: 16px;
+    font-size: 14px;
   }
   header nav {
-    min-width: 10rem;
-  }
-  header nav a {
-    font-size: 1.2rem;
-  }
-  header nav ul {
-    position: absolute;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    transform: translateY(-10rem);
-    transition: 1s all;
-    width: -moz-max-content;
-    width: max-content;
-    border-radius: 1rem;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    border: 1px solid var(--thirdColor);
-    background-color: rgba(0, 0, 0, 0.9019607843);
-    -webkit-backdrop-filter: blur(0.5rem);
-            backdrop-filter: blur(0.5rem);
-    box-shadow: 0 0 1rem 0.4rem var(--thirdColor);
-  }
-  header nav ul li a {
-    color: var(--thirdColor);
-    font-size: 1.2rem;
+    width: 90%;
   }
   header nav .menu {
+    font-size: 1.5rem;
+  }
+  header nav .connexion {
+    display: none;
+  }
+  header nav .blocIcones button img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  header nav ul {
+    transform: translateY(-50rem);
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  header nav ul .connexion {
     display: block;
+    padding: 0.2rem 0.5rem;
   }
-  header nav .menu p {
-    color: var(--secondColor);
-    font-family: aladin, sans-serif;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: 0.5s all;
+  .flip-card {
+    width: 25rem;
+    top: 40%;
+    z-index: 20;
   }
-  header nav .menu p:hover {
-    transform: scale(1.2);
+  .flip-card input::-moz-placeholder {
+    font-size: 0.8rem;
   }
-  header .active .menu p {
-    color: var(--thirdColor);
+  .flip-card input::placeholder {
+    font-size: 0.8rem;
   }
-  header .active ul {
-    transform: translateY(7.5rem);
+  .flip-card input[type=tel]::-moz-placeholder {
+    font-size: 0.8rem;
+  }
+  .flip-card input[type=tel]::placeholder {
+    font-size: 0.8rem;
   }
   main.index section,
   main.index section.reverse {
@@ -853,10 +1085,17 @@ footer nav a:hover {
   main.prestations .clients .bloc {
     flex-direction: row;
     width: 800px;
-    animation: scroll 40s linear infinite;
+    animation: scroll2 20s linear infinite;
+  }
+  main.prestations .clients .bloc:hover {
+    animation-play-state: initial;
   }
   main.prestations .clients .bloc .commentaire {
     min-width: 200px;
+  }
+  main.prestations .clients .bloc .commentaire:hover {
+    transform: none;
+    margin: 0;
   }
   main.portfolio section {
     flex-direction: column;
