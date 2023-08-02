@@ -256,7 +256,8 @@ header .active ul {
   cursor: pointer;
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -569,7 +570,8 @@ main.portfolio section .textAndCarousel .text {
   align-items: center;
   overflow: hidden;
 }
-main.portfolio section .textAndCarousel .text h2, main.portfolio section .textAndCarousel .text p {
+main.portfolio section .textAndCarousel .text h2,
+main.portfolio section .textAndCarousel .text p {
   color: var(--secondColor);
 }
 main.portfolio section .textAndCarousel .text h2 {
@@ -735,14 +737,18 @@ main.contact .infosContact {
   display: flex;
   justify-content: space-around;
 }
-main.contact .infosContact .adress, main.contact .infosContact .phone, main.contact .infosContact .mail {
+main.contact .infosContact .adress,
+main.contact .infosContact .phone,
+main.contact .infosContact .mail {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
   width: 10rem;
 }
-main.contact .infosContact .adress .icone, main.contact .infosContact .phone .icone, main.contact .infosContact .mail .icone {
+main.contact .infosContact .adress .icone,
+main.contact .infosContact .phone .icone,
+main.contact .infosContact .mail .icone {
   background-color: var(--thirdColor);
   border-radius: 50%;
   display: flex;
@@ -751,13 +757,17 @@ main.contact .infosContact .adress .icone, main.contact .infosContact .phone .ic
   width: 5rem;
   height: 5rem;
 }
-main.contact .infosContact .adress h4, main.contact .infosContact .phone h4, main.contact .infosContact .mail h4 {
+main.contact .infosContact .adress h4,
+main.contact .infosContact .phone h4,
+main.contact .infosContact .mail h4 {
   color: var(--thirdColor);
   width: -moz-max-content;
   width: max-content;
   margin: 0.8rem auto 0;
 }
-main.contact .infosContact .adress p, main.contact .infosContact .phone p, main.contact .infosContact .mail p {
+main.contact .infosContact .adress p,
+main.contact .infosContact .phone p,
+main.contact .infosContact .mail p {
   color: var(--secondColor);
   width: -moz-max-content;
   width: max-content;
@@ -777,7 +787,8 @@ main.contact form {
   margin: 0 auto;
   width: 70%;
 }
-main.contact form input, main.contact form textarea {
+main.contact form input,
+main.contact form textarea {
   border: 2px solid var(--thirdColor);
   background-color: var(--firstColor);
   border-radius: 0.5rem;
@@ -969,7 +980,7 @@ footer nav a:hover {
   }
   .flip-card {
     width: 25rem;
-    top: 40%;
+    top: 50%;
     z-index: 20;
   }
   .flip-card input::-moz-placeholder {
